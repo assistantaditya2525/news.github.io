@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News 365 </title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="shortcut icon" href="OIP (2).jpg" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" onclick="reload()"> <img src="news365.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="#" id="ipl" onclick="onNavItemClick('ipl')">IPL</a>
+            </li>
+            <li class="nav-item  active">
+              <a class="nav-link" href="#" id="Finance" onclick="onNavItemClick('Finance')">Finance</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Type
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" id="Sports" onclick="onNavItemClick('Sports')">Sports</a></li>
+                <li><a class="dropdown-item" href="#" id="Education" onclick="onNavItemClick('Education')">Education</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#" id="AI" onclick="onNavItemClick('AI')">AI</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" id="Politics" onclick="onNavItemClick('Politics')">Politics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#" aria-disabled="true" id="Family"
+                onclick="onNavItemClick('Family')">Family</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input id="search-Text" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="search-button" class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </nav>
+  <main>
+    <div class="cards-container container flex" id="cards-container">
+    </div>
+  </main>
+  <template id="template-news-card">
+
+    <div class="card" style="width: 400px; height: 510px; gap: 40px;">
+      <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="..." id="news-img">
+      <div class="card-body">
+        <h5 class="card-title" id="news-title">Card title</h5>
+        <h6 class="news-source" id="news-source">End Gadget 26/08/2024</h6>
+        <p class="card-text" id="news-desc">Some quick example text to build on the card title and make up the bulk of
+          the card's content.</p>
+
+      </div>
+    </div>
+  </template>
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
